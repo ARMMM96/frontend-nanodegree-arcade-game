@@ -73,26 +73,6 @@ const Player = class Player{
         }
     }
 
-    update() {
-        // Prevent player from moving beyond canvas wall boundaries
-        if (this.y > 380) {
-            this.y = 380;
-        }
-
-        if (this.x > 400) {
-            this.x = 400;
-        }
-
-        if (this.x < 0) {
-            this.x = 0;
-        }
-
-        // Check for player reaching top of canvas and winning the game
-        if (this.y < 0) {
-            this.x = 200;
-            this.y = 380;
-        }
-    }
     render(){
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
